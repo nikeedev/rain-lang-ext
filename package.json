@@ -3,7 +3,7 @@
   "publisher": "nikeedev",
   "displayName": "Extension for Rain Lang",
   "description": "Extension for working with Rain language",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.79.0"
   },
