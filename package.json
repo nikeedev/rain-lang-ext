@@ -1,0 +1,34 @@
+{
+  "name": "rain-lang-ext",
+  "publisher": "nikeedev",
+  "displayName": "Extension for Rain Lang",
+  "description": "Extension for working with Rain language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "icon": "icons/Rain-Logo-Light.png",
+  "contributes": {
+    "languages": [{
+      "id": "rain",
+      "aliases": ["Rain", "rain"],
+      "extensions": [".rain"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "dark": "icons/Rain-File-Icon.png",
+        "light": "icons/Rain-File-Icon.png"
+      }
+    }],
+    "grammars": [{
+      "language": "rain",
+      "scopeName": "source.rain",
+      "path": "./syntaxes/rain.tmLanguage.json"
+    }]
+  },
+  "repository": {
+    "url": "https://github.com/nikeedev/rain-lang-ext"
+  }
+}
