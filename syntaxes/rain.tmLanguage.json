@@ -3,22 +3,50 @@
   "name": "Rain",
   "patterns": [
     {
+      "include": "#comments"
+    },
+    {
       "include": "#keywords"
     },
     {
       "include": "#strings"
+    },
+    {
+      "include": "#paran"
     }
   ],
   "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "begin": "//",
+          "end": "$",
+          "name": "comment.line.double-slash.rain"
+        },
+        {
+          "begin": "/\\*",
+          "end": "\\*/",
+          "name": "comment.block.rain"
+        }
+      ]
+    },
     "keywords": {
       "patterns": [
         {
           "name": "keyword.control.rain",
-          "match": "\\b(if|while|for|return)\\b"
+          "match": "\\b(if|else|for|return)\\b"
+        },
+        {
+          "name": "keyword.control.rain",
+          "match": "\\b(::|:=|:|+|-|*|**|+=|-=|*=|!)\\b"
         },
         {
           "name": "keyword.operator.rain",
-          "match": "\\b(::|:=|:|->|)\\b"
+          "match": "\\b(import|class|string|object|int|float|bool|fn)\\b"
+        },
+        {
+          "name": "constant.language.rain",
+          "match": "\\b(true|false)\\b"
         }
       ]
     },
@@ -32,6 +60,17 @@
           "match": "\\\\."
         }
       ]
+    },
+    "paren": {
+      "begin": "\\(",
+      "end": "\\)",
+      "beginCaptures": {
+        "0": { "name": "punctuation.paren.open" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.paren.close" }
+      },
+      "name": "expressions.group"
     }
   },
   "scopeName": "source.rain"

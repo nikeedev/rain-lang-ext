@@ -2,8 +2,8 @@
   "name": "rain-lang-ext",
   "publisher": "nikeedev",
   "displayName": "Extension for Rain Lang",
-  "description": "Extension for working with Rain language",
-  "version": "0.1.0",
+  "description": "Extension for working with Rain programming language",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.79.0"
   },
