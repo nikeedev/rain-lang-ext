@@ -1,0 +1,5 @@
+// SYNTAX TEST "rain"
+
+main :: () {
+    println("dfd");
+}

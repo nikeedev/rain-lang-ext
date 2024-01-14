@@ -3,6 +3,9 @@
   "name": "Rain",
   "patterns": [
     {
+      "include": "#expression"
+    },
+    {
       "include": "#comments"
     },
     {
@@ -16,6 +19,9 @@
     }
   ],
   "repository": {
+    "expression": {
+      "patterns": [{ "include": "#letter" }, { "include": "#paren-expression" }]
+    },
     "comments": {
       "patterns": [
         {
@@ -62,8 +68,8 @@
       ]
     },
     "paren": {
-      "begin": "\\(",
-      "end": "\\)",
+      "begin": "\\{",
+      "end": "\\{",
       "beginCaptures": {
         "0": { "name": "punctuation.paren.open" }
       },
