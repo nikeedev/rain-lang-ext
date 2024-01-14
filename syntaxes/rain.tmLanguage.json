@@ -20,7 +20,7 @@
   ],
   "repository": {
     "expression": {
-      "patterns": [{ "include": "#letter" }, { "include": "#paren-expression" }]
+      "patterns": [{ "include": "#paren-expression" }]
     },
     "comments": {
       "patterns": [
