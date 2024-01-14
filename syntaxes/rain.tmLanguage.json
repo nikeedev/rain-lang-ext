@@ -53,7 +53,11 @@
         {
           "name": "constant.language.rain",
           "match": "\\b(true|false)\\b"
-        }
+        },
+        {
+          "name": "keyword.other",
+          "match": "main"
+        } 
       ]
     },
     "strings": {

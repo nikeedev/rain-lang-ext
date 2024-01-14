@@ -20,7 +20,7 @@
           "rain"
         ],
         "extensions": [
-          ".rain"
+          "rain"
         ],
         "configuration": "./language-configuration.json",
         "icon": {
@@ -39,8 +39,5 @@
   },
   "repository": {
     "url": "https://github.com/nikeedev/rain-lang-ext"
-  },
-  "devDependencies": {
-    "js-yaml": "^4.1.0"
   }
 }
