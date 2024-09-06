@@ -1,4 +1,5 @@
-
+#import name
 main :: () {
     println("dfd");
+    int
 } 

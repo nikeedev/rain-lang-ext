@@ -11,19 +11,7 @@
       "include": "#keywords"
     },
     {
-      "include": "#functions"
-    },
-    {
-      "include": "#functionCalls"
-    },
-    {
-      "#include": "#systemFunctions"
-    },
-    {
-      "#include": "#numbers"
-    },
-    {
-      "include": "#variables"
+      "include": "#names"
     },
     {
       "include": "#types"
@@ -53,51 +41,11 @@
         }
       ]
     },
-    "functions": {
+    "names": {
       "patterns": [
         {
           "name": "entity.name.function.rain",
-          "match": "\\b\\w+\\b\\s*::\\s*\\(\\)\\s*\\{|(?<=::\\s*)\\b\\w+\\b(?=\\s*\\()"
-        }
-      ]
-    },
-    "functionCalls": {
-      "patterns": [
-        {
-          "name": "meta.function-call.rain",
-          "match": "\\b\\w+\\b(?=\\.)"
-        },
-        {
-          "name": "meta.function-call.rain",
-          "match": "\\.\\w+\\("
-        }
-      ]
-    },
-    "systemFunctions": {
-      "patterns": [
-        {
-          "name": "keyword.function.system.rain",
-          "match": "\\b(print|println)\\b(?=\\()"
-        }
-      ]
-    },
-    "numbers": {
-      "patterns": [
-        {
-          "name": "constant.numeric.integer.rain",
-          "match": "\\b(0x[0-9a-fA-F]+|\\d+)\\b"
-        },
-        {
-          "name": "constant.numeric.float.rain",
-          "match": "\\b\\d*\\.\\d+([eE][+-]?\\d+)?\\b"
-        }
-      ]
-    },
-    "variables": {
-      "patterns": [
-        {
-          "name": "variable.other.rain",
-          "match": "\\b\\w+\\b\\s*(?::=|::)(?!\\s*\\(|\\{)"
+          "match": "\\^.*?(?=::)"
         }
       ]
     },
@@ -105,15 +53,11 @@
       "patterns": [
         {
           "name": "keyword.control.rain",
-          "match": "\\b(if|else|for|return|match)\\b"
+          "match": "\\b(if|else|for|return)\\b"
         },
         {
           "name": "keyword.operator.rain",
-          "match": "\\b(::|:=|:|\\+|-|\\*|\\*\\*|\\+=|-=|\\*=|!=|true|false|null|void)\\b"
-        },
-        {
-          "name": "keyword.other.rain",
-          "match": "\\b(break|continue|case|default|in)\\b"
+          "match": "\\b(::|:=|:|+|-|*|**|+=|-=|*=|!|true|false)\\b"
         }
       ]
     },
@@ -121,11 +65,7 @@
       "patterns": [
         {
           "name": "storage.type.rain",
-          "match": "\\b(class|string|char|object|int|float|bool|fiber|fn|i8|i16|i64|u8|u16|u32|u64)\\b"
-        },
-        {
-          "name": "storage.modifier",
-          "match": "\\b(pub)\\b"
+          "match": "\\b(class|string|object|int|float|bool|fn1|i8|i16|i64|u8|u16|u32|u64)\\b"
         }
       ]
     },
@@ -143,22 +83,6 @@
         {
           "name": "constant.character.escape.rain",
           "match": "\\\\."
-        },
-        {
-          "name": "variable.language.rain",
-          "begin": "\\{",
-          "end": "\\}",
-          "beginCaptures": {
-            "0": { "name": "punctuation.definition.interpolation.rain" }
-          },
-          "endCaptures": {
-            "0": { "name": "punctuation.definition.interpolation.rain" }
-          },
-          "patterns": [
-            {
-              "include": "#names"
-            }
-          ]
         }
       ]
     },

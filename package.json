@@ -22,11 +22,11 @@
         "extensions": [
           "rain"
         ],
-        "configuration": "./language-configuration.json",
         "icon": {
-          "dark": "icons/Rain-File-Icon.png",
-          "light": "icons/Rain-File-Icon.png"
-        }
+          "dark": "icons/New-Rain-File-Icon.png",
+          "light": "icons/New-Rain-File-Icon.png"
+        },
+        "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
